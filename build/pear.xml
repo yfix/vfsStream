@@ -5,7 +5,7 @@
     <d51pearpkg2 dir="${build.src.dir}" baseinstalldir="/">
       <name>vfsStream</name>
       <summary>Mock file system calls.</summary>
-      <channel>pear.php-tools.net</channel>
+      <channel>pear.bovigo.org</channel>
       <description>
         vfsStream is a stream wrapper for a virtual
         file system that may be helpful in unit tests
@@ -21,6 +21,10 @@
       <dirroles key="docs">doc</dirroles>
       <version release="${version}" api="0.11.0"/>
       <stability release="beta" api="beta"/>
+
+      <changelog version="0.12" api_version="0.11.0" date="2012-04-03">
+        - switch to new PEAR channel pear.bovigo.org
+      </changelog>
 
       <changelog version="0.11.2" api_version="0.11.0" date="2012-01-14">
         - fixed issue #29: set permissions properly when using
