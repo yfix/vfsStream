@@ -17,7 +17,7 @@
     <include name="**/*TestCase*.php"/>
     <include name="**/*Test.php"/>
   </fileset>
-  
+
   <target name="main" if="version" depends="check-style,test,create-api-doc,versioncheck,copy-files"/>
 
   <target name="release" depends="main,package"/>
@@ -85,7 +85,7 @@
   </target>
 
   <target name="create-api-doc" description="Creates API docs">
-    <exec command="docblox -d src/main/php/org/bovigo/vfs -t ${build.report.dir}/docblox --title vfsStream API Doc --defaultpackagename bovigo_vfs" passthru="true"/>
+    <exec command="phpdoc -d src/main/php/org/bovigo/vfs -t ${build.report.dir}/docblox --title vfsStream API Doc --defaultpackagename bovigo_vfs" passthru="true"/>
   </target>
 
   <target name="versioncheck" unless="version">
